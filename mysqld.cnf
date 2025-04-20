@@ -1,0 +1,30 @@
+[mysqld]
+user = mysql
+socket = /var/run/mysqld/mysqld.sock
+port = 3306
+datadir = /var/lib/mysql
+bind-address = 0.0.0.0
+
+key_buffer_size = 64M
+max_allowed_packet = 1024M
+wait_timeout = 99999999
+interactive_timeout = 99999999
+innodb_buffer_pool_size = 4G
+innodb_log_file_size = 256M
+innodb_file_per_table = 1
+innodb_log_buffer_size = 16M
+innodb_io_capacity = 1000
+innodb_flush_log_at_trx_commit = 2
+innodb_lock_wait_timeout = 999999999
+
+max_connections = 300
+tmp_table_size = 64M
+max_heap_table_size = 64M
+table_open_cache = 2048M
+
+log_error = /var/log/mysql/error.log
+slow_query_log = 1
+slow_query_log_file = /var/log/mysql/mysql-slow.log
+long_query_time = 2
+log_bin = /var/log/mysql/mysql-bin.log
+max_binlog_size = 100M
